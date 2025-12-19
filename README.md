@@ -1,13 +1,6 @@
-Perfect — a strong README will really help your submission. Here’s a **clean, complete draft** tailored to Spur’s take-home and your stack (Node + TS, Prisma + Render Postgres, SvelteKit, Groq LLM).
-
-You can copy this into `README.md` at repo root and tweak names/URLs.
-
----
-
-# 🤖 Spur AI Live Chat Agent
+# 🤖 AI Live Chat Agent
 
 A mini full-stack web app that simulates a customer support chat widget powered by an AI agent.
-Built as a take-home assignment for **Founding Full-Stack Engineer @ Spur**.
 
 The app lets users chat with an AI support agent, persists conversations, and answers questions using domain knowledge of a fictional e-commerce store.
 
@@ -49,7 +42,7 @@ The app lets users chat with an AI support agent, persists conversations, and an
 ## 📁 Project Structure
 
 ```
-spur-ai-chat/
+ai-chat/
 ├── backend/
 │   ├── src/
 │   │   ├── routes/      # API routes
@@ -83,8 +76,8 @@ spur-ai-chat/
 ### 1️⃣ Clone Repo
 
 ```bash
-git clone <your-repo-url>
-cd spur-ai-chat
+git clone https://github.com/tangentveil/ai-chat-groq.git
+cd ai-chat-groq
 ```
 
 ---
@@ -305,4 +298,4 @@ Chosen because:
 
 ## 🙌 Author
 
-Built by **Anirudha Rajodiya** as part of Spur take-home assignment.
+Built by **Anirudha Rajodiya**.
