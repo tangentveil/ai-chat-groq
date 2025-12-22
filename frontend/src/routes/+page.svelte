@@ -28,7 +28,7 @@
         const payload: any = { message: userMsg };
         if (sessionId) payload.sessionId = sessionId;
 
-      const res = await fetch("http://localhost:4000/chat/message", {
+      const res = await fetch("https://ai-chat-groq.onrender.com/chat/message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
