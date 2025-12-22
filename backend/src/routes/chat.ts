@@ -2,6 +2,7 @@ import { Router } from "express";
 import { z } from "zod";
 import { prisma } from "../db/prisma";
 import { generateReply } from "../services/llm";
+import type { Message } from "@prisma/client";
 
 const router = Router();
 
@@ -11,7 +12,7 @@ const chatSchema = z.object({
 });
 
 router.post("/message", async (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
   try {
     const { message, sessionId } = chatSchema.parse(req.body);
 
@@ -44,7 +45,7 @@ router.post("/message", async (req, res) => {
     let reply: string;
     try {
       reply = await generateReply(
-        history.map((m) => ({ sender: m.sender, text: m.text })),
+        history.map((m: Message) => ({ sender: m.sender, text: m.text })),
         message
       );
     } catch {
