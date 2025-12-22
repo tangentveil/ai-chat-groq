@@ -16,6 +16,8 @@
     sessionId = localStorage.getItem("sessionId");
   });
 
+  const API_BASE = import.meta.env.VITE_API_URL;
+
   async function sendMessage() {
     if (!input.trim() || loading) return;
 
@@ -28,7 +30,7 @@
         const payload: any = { message: userMsg };
         if (sessionId) payload.sessionId = sessionId;
 
-      const res = await fetch("https://ai-chat-groq.onrender.com/chat/message", {
+      const res = await fetch(`${API_BASE}/chat/message`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
