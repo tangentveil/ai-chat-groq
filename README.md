@@ -1,4 +1,4 @@
-# 🤖 AI Live Chat Agent
+# [🤖 AI Live Chat Agent](https://ai-chat-groq-six.vercel.app/)
 
 A mini full-stack web app that simulates a customer support chat widget powered by an AI agent.
 
